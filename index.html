@@ -8,13 +8,12 @@
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            --accent-beige: #e9d5c3;
+            --logo-beige: #f3eee3; /* Cor extraída do fundo da imagem 16489.png */
             --accent-orange: #d48b49;
-            --card-bg: #fffcf9;
-            --text-dark: #332d29;
+            --text-dark: #4a3f35;
         }
 
-        * { margin: 0; padding: 0; box-all: border-box; font-family: 'Poppins', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
         body { background-color: var(--bg-dark); color: white; padding: 15px; }
 
@@ -23,119 +22,84 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
+            padding: 10px 0 20px 0;
         }
-        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.2rem; }
-        .btn-call {
+        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.3rem; }
+        .btn-whatsapp {
             background: var(--accent-orange);
             color: white;
-            padding: 8px 15px;
+            padding: 8px 20px;
             border-radius: 20px;
             text-decoration: none;
-            font-size: 0.8rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background-color: var(--accent-beige);
-            border-radius: 30px;
-            padding: 30px 20px;
-            color: var(--text-dark);
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
-        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; }
-        .hero h1 span { color: var(--accent-orange); font-size: 1.8rem; text-transform: none; letter-spacing: normal; }
-        .hero p { font-size: 0.85rem; opacity: 0.8; margin-bottom: 20px; }
-        .hero .main-img { width: 80%; max-width: 250px; margin-bottom: 20px; }
-        .btn-order {
-            background: var(--bg-dark);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            display: inline-block;
+            font-size: 0.85rem;
             font-weight: 600;
         }
 
-        /* Grid de Produtos */
-        .section-title { font-size: 1.4rem; margin-bottom: 20px; }
-        .product-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Coluna única para mobile */
-            gap: 20px;
-        }
-        .product-card {
-            background: var(--card-bg);
-            border-radius: 20px;
+        /* Hero Section - Compactada e com cor ajustada */
+        .hero {
+            background-color: var(--logo-beige);
+            border-radius: 25px;
             padding: 20px;
-            text-align: center;
             color: var(--text-dark);
-            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+            /* Diminuindo o tamanho da 'embed' */
+            max-width: 95%;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--accent-orange);
-            color: white;
-            font-size: 0.6rem;
-            padding: 3px 10px;
-            border-radius: 10px;
-        }
-        .product-card img { width: 100px; height: 100px; object-fit: contain; margin-bottom: 15px; }
-        .product-card h3 { font-size: 1rem; margin-bottom: 5px; }
-        .product-card .price { font-weight: 700; color: var(--accent-orange); margin-bottom: 15px; display: block; }
-        .btn-buy {
-            background: var(--bg-dark);
-            color: white;
-            width: 100%;
-            padding: 10px;
-            border-radius: 10px;
-            text-decoration: none;
+        .hero span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.7; }
+        .hero h1 { font-size: 1.5rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+        .hero h1 span { color: var(--accent-orange); font-size: 1.5rem; }
+        
+        .hero .main-img { 
+            width: 70%; 
+            max-width: 180px; 
+            margin: 10px 0;
             display: block;
-            font-size: 0.9rem;
+            margin-left: auto;
+            margin-right: auto;
         }
+        .hero p { font-size: 0.8rem; line-height: 1.4; margin-top: 10px; }
+
+        /* Seção de Conteúdo */
+        .content-section { margin-top: 20px; }
+        .section-title { font-size: 1.2rem; color: white; margin-bottom: 10px; }
+        
+        .coming-soon-box {
+            background: #252525;
+            border: 1px dashed #444;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            color: #888;
+        }
+        .coming-soon-box p { font-style: italic; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Confeitos</div>
-        <a href="#" class="btn-call">Contato</a>
+        <!-- Link configurado para o seu número -->
+        <a href="https://wa.me/5538991240112" target="_blank" class="btn-whatsapp">Contato</a>
     </header>
 
     <section class="hero">
         <span>SOBREMESAS</span>
         <h1>Bolos Caseiros com <span>Sabores Deliciosos</span></h1>
+        
+        <!-- Imagem centralizada e menor -->
+        <img src="16489.png" alt="Confeitos Logo" class="main-img">
+        
         <p>Sabor caseiro e tradição em cada pedaço, feitos com ingredientes selecionados para você.</p>
-        
-        <!-- Substituição da imagem conforme solicitado -->
-        <img src="Logo.png" alt="Confeitos Logo" class="main-img">
-        
-        <br>
-        <a href="#" class="btn-order">Peça Agora</a>
     </section>
 
-    <h2 class="section-title">Nossos Doces</h2>
-
-    <div class="product-grid">
-        <!-- Card de Exemplo -->
-        <div class="product-card">
-            <span class="badge">Novo</span>
-            <img src="https://png.pngtree.com/png-vector/20231017/ourmid/pngtree-chocolate-cake-with-cream-png-image_10201474.png" alt="Bolo de Chocolate">
-            <h3>Bolo de Chocolate</h3>
-            <span class="price">R$ 49,90</span>
-            <a href="#" class="btn-buy">Pedir Agora</a>
-        </div>
-
-        <div class="product-card">
-            <span class="badge">Destaque</span>
-            <img src="https://png.pngtree.com/png-clipart/20230508/original/pngtree-strawberry-cheesecake-dessert-food-png-image_9153018.png" alt="Delícia de Morango">
-            <h3>Delícia de Morango</h3>
-            <span class="price">R$ 55,00</span>
-            <a href="#" class="btn-buy">Pedir Agora</a>
+    <div class="content-section">
+        <h2 class="section-title">Destaques da Semana</h2>
+        
+        <div class="coming-soon-box">
+            <p>Novidade em breve...</p>
         </div>
     </div>
 
