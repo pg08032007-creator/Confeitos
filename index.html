@@ -4,93 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Confeitos - Sabor Caseiro & Tradição</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            --logo-beige: #f3eee3; /* Cor extraída do fundo da imagem 16489.png */
+            --banner-bg: #f8f5f0; 
             --accent-orange: #d48b49;
-            --text-dark: #4a3f35;
+            --text-on-banner: #5a4a3a;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
         body { background-color: var(--bg-dark); color: white; padding: 15px; }
 
-        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0 20px 0;
+            padding: 10px 5px 25px 5px;
         }
-        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.3rem; }
+        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; }
         .btn-whatsapp {
             background: var(--accent-orange);
             color: white;
-            padding: 8px 20px;
-            border-radius: 20px;
+            padding: 10px 22px;
+            border-radius: 25px;
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
         }
 
-        /* Hero Section - Compactada e com cor ajustada */
+        /* Banner (Hero) Ampliado */
         .hero {
-            background-color: var(--logo-beige);
-            border-radius: 25px;
-            padding: 20px;
-            color: var(--text-dark);
+            background-color: var(--banner-bg);
+            border-radius: 30px;
+            /* Aumentado o padding para dar mais corpo ao banner */
+            padding: 50px 25px; 
+            color: var(--text-on-banner);
             text-align: center;
-            margin-bottom: 30px;
-            /* Diminuindo o tamanho da 'embed' */
-            max-width: 95%;
+            margin-bottom: 40px;
+            max-width: 100%;
             margin-left: auto;
             margin-right: auto;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
-        .hero span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.7; }
-        .hero h1 { font-size: 1.5rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
-        .hero h1 span { color: var(--accent-orange); font-size: 1.5rem; }
         
+        .hero span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.8; }
+        .hero h1 { font-size: 1.9rem; margin: 20px 0; line-height: 1.1; font-weight: 700; }
+        .hero h1 span { color: var(--accent-orange); }
+        
+        /* Imagem da Logo em destaque maior */
         .hero .main-img { 
-            width: 70%; 
-            max-width: 180px; 
-            margin: 10px 0;
+            width: 95%; 
+            max-width: 300px; 
+            margin: 25px 0;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            mix-blend-mode: multiply; 
         }
-        .hero p { font-size: 0.8rem; line-height: 1.4; margin-top: 10px; }
+        
+        .hero p { font-size: 1rem; line-height: 1.5; margin-top: 20px; font-weight: 400; }
 
-        /* Seção de Conteúdo */
-        .content-section { margin-top: 20px; }
-        .section-title { font-size: 1.2rem; color: white; margin-bottom: 10px; }
+        /* Seções Inferiores */
+        .content-section { margin-top: 30px; padding: 0 5px; }
+        .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }
         
         .coming-soon-box {
             background: #252525;
-            border: 1px dashed #444;
-            border-radius: 15px;
-            padding: 40px 20px;
+            border: 1px dashed #555;
+            border-radius: 20px;
+            padding: 50px 20px;
             text-align: center;
-            color: #888;
+            color: #999;
         }
-        .coming-soon-box p { font-style: italic; font-size: 0.9rem; }
+        .coming-soon-box p { font-style: italic; font-size: 1rem; }
     </style>
 </head>
 <body>
 
     <header>
         <div class="logo">Confeitos</div>
-        <!-- Link configurado para o seu número -->
         <a href="https://wa.me/5538991240112" target="_blank" class="btn-whatsapp">Contato</a>
     </header>
 
     <section class="hero">
         <span>SOBREMESAS</span>
-        <h1>Bolos Caseiros com <span>Sabores Deliciosos</span></h1>
+        <h1>Bolos Caseiros com<br><span>Sabores Deliciosos</span></h1>
         
-        <!-- Imagem centralizada e menor -->
-        <img src="16489.png" alt="Confeitos Logo" class="main-img">
+        <img src="Logo.png" alt="Confeitos Logo" class="main-img">
         
         <p>Sabor caseiro e tradição em cada pedaço, feitos com ingredientes selecionados para você.</p>
     </section>
