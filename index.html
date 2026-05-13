@@ -8,10 +8,10 @@
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            /* Cor exata do fundo da Logo.png */
-            --logo-bg-color: #f7f3ed; 
+            /* Cor EXATA do fundo da Logo.png para camuflar o quadrado branco */
+            --banner-color: #f7f4ed; 
             --accent-orange: #d48b49;
-            --text-dark: #4a3f35;
+            --text-on-banner: #4a3f35;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
@@ -36,49 +36,49 @@
             font-weight: 600;
         }
 
-        /* Hero Section - Cor idêntica à logo e tamanho reduzido */
+        /* Banner Principal (Hero) */
         .hero {
-            background-color: var(--logo-bg-color);
+            background-color: var(--banner-color); /* Agora igual à imagem Logo.png */
             border-radius: 25px;
-            padding: 20px;
-            color: var(--text-dark);
+            padding: 25px 20px;
+            color: var(--text-on-banner);
             text-align: center;
             margin-bottom: 30px;
-            max-width: 92%;
+            max-width: 95%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
-        .hero span { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.8; }
-        .hero h1 { font-size: 1.4rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
+        .hero span { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; opacity: 0.7; }
+        .hero h1 { font-size: 1.6rem; margin: 10px 0; line-height: 1.2; font-weight: 700; }
         .hero h1 span { color: var(--accent-orange); }
         
-        /* Imagem da Logo */
+        /* Ajuste da imagem para não ter bordas visíveis */
         .hero .main-img { 
-            width: 65%; 
-            max-width: 160px; 
-            margin: 5px 0;
+            width: 80%; 
+            max-width: 220px; 
+            margin: 10px 0;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            mix-blend-mode: multiply; /* Ajuda a mesclar caso haja diferença mínima de tom */
         }
         
-        .hero p { font-size: 0.75rem; line-height: 1.4; margin-top: 10px; font-weight: 400; }
+        .hero p { font-size: 0.85rem; line-height: 1.4; margin-top: 15px; }
 
         /* Seção de Conteúdo */
         .content-section { margin-top: 20px; padding: 0 10px; }
-        .section-title { font-size: 1.1rem; color: white; margin-bottom: 15px; font-weight: 600; }
+        .section-title { font-size: 1.2rem; color: white; margin-bottom: 15px; }
         
         .coming-soon-box {
             background: #252525;
             border: 1px dashed #444;
             border-radius: 15px;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
-            color: #777;
+            color: #888;
         }
-        .coming-soon-box p { font-style: italic; font-size: 0.85rem; }
+        .coming-soon-box p { font-style: italic; font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -90,9 +90,8 @@
 
     <section class="hero">
         <span>SOBREMESAS</span>
-        <h1>Bolos Caseiros com <span>Sabores Deliciosos</span></h1>
+        <h1>Bolos Caseiros com<br><span>Sabores Deliciosos</span></h1>
         
-        <!-- Nome do arquivo alterado para Logo.png -->
         <img src="Logo.png" alt="Confeitos Logo" class="main-img">
         
         <p>Sabor caseiro e tradição em cada pedaço, feitos com ingredientes selecionados para você.</p>
