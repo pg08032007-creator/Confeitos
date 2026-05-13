@@ -8,15 +8,16 @@
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            --banner-bg: #f8f5f0; 
+            --banner-brown: #413529; /* Cor marrom baseada na imagem 27136.jpg */
             --accent-orange: #d48b49;
-            --text-on-banner: #5a4a3a;
+            --text-white: #ffffff;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
         body { background-color: var(--bg-dark); color: white; padding: 15px; }
 
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -24,6 +25,7 @@
             padding: 10px 5px 25px 5px;
         }
         .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; }
+        
         .btn-whatsapp {
             background: var(--accent-orange);
             color: white;
@@ -34,39 +36,35 @@
             font-weight: 600;
         }
 
-        /* Banner (Hero) Ampliado */
+        /* Banner Principal conforme 27136.jpg */
         .hero {
-            background-color: var(--banner-bg);
-            border-radius: 30px;
-            /* Aumentado o padding para dar mais corpo ao banner */
-            padding: 50px 25px; 
-            color: var(--text-on-banner);
+            background-color: var(--banner-brown);
+            border-radius: 35px;
+            padding: 45px 20px; 
+            color: var(--text-white);
             text-align: center;
             margin-bottom: 40px;
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
         
-        .hero span { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.8; }
-        .hero h1 { font-size: 1.9rem; margin: 20px 0; line-height: 1.1; font-weight: 700; }
+        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.9; }
+        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; font-weight: 700; }
         .hero h1 span { color: var(--accent-orange); }
         
-        /* Imagem da Logo em destaque maior */
-        .hero .main-img { 
-            width: 95%; 
-            max-width: 300px; 
-            margin: 25px 0;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            mix-blend-mode: multiply; 
-        }
-        
-        .hero p { font-size: 1rem; line-height: 1.5; margin-top: 20px; font-weight: 400; }
+        .hero p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 25px; opacity: 0.8; }
 
-        /* Seções Inferiores */
+        /* Imagem Logo.png centralizada */
+        .hero .main-img { 
+            width: 100%; 
+            max-width: 260px; 
+            margin: 0 auto;
+            display: block;
+            border-radius: 5px; /* Leve arredondamento como na prévia */
+        }
+
+        /* Seção Inferior */
         .content-section { margin-top: 30px; padding: 0 5px; }
         .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }
         
@@ -92,9 +90,10 @@
         <span>SOBREMESAS</span>
         <h1>Bolos Caseiros com<br><span>Sabores Deliciosos</span></h1>
         
-        <img src="Logo.png" alt="Confeitos Logo" class="main-img">
-        
         <p>Sabor caseiro e tradição em cada pedaço, feitos com ingredientes selecionados para você.</p>
+        
+        <!-- Imagem centralizada sem o botão abaixo -->
+        <img src="Logo.png" alt="Confeitos Logo" class="main-img">
     </section>
 
     <div class="content-section">
