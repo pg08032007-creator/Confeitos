@@ -8,8 +8,8 @@
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            /* Cor Bege Claro para o Banner conforme solicitado */
-            --banner-bege: #f8f5f0; 
+            /* Cor extraída exatamente do fundo da sua logo */
+            --banner-bege: #f2eee3; 
             --accent-orange: #d48b49;
             --text-dark-brown: #413529;
         }
@@ -37,12 +37,12 @@
             font-weight: 600;
         }
 
-        /* Banner Principal - Agora em Bege Claro */
+        /* Banner Principal */
         .hero {
             background-color: var(--banner-bege);
             border-radius: 35px;
             padding: 45px 20px; 
-            color: var(--text-dark-brown); /* Texto escurecido para contraste */
+            color: var(--text-dark-brown);
             text-align: center;
             margin-bottom: 40px;
             max-width: 100%;
@@ -59,11 +59,11 @@
 
         /* Imagem Logo.png */
         .hero .main-img { 
-            width: 100%; 
+            width: 100%;
             max-width: 260px; 
             margin: 0 auto;
             display: block;
-            mix-blend-mode: multiply; /* Faz o fundo da imagem sumir no bege */
+            /* Removido o mix-blend-mode para evitar variações de tom */
         }
 
         /* Seção Inferior */
