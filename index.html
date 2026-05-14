@@ -11,106 +11,92 @@
             --banner-bege: #f5f1e9; 
             --accent-orange: #d48b49;
             --text-dark-brown: #413529;
-            --card-bg: #252525;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; [span_2](start_span)}
 
-        body { background-color: var(--bg-dark); color: white; padding: 15px; }
+        body { background-color: var(--bg-dark); color: white; padding: 15px; }[span_2](end_span)
 
         /* Header */
         header {
-            display: flex;
-            justify-content: space-between;
+            [span_3](start_span)display: flex;[span_3](end_span)
+            [span_4](start_span)justify-content: space-between;[span_4](end_span)
             align-items: center;
             padding: 10px 5px 25px 5px;
         }
-        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; }
+        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; [span_5](start_span)}
         
         .btn-whatsapp {
-            background: var(--accent-orange);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 25px;
-            text-decoration: none;
+            background: var(--accent-orange);[span_5](end_span)
+            [span_6](start_span)color: white;[span_6](end_span)
+            [span_7](start_span)padding: 10px 22px;[span_7](end_span)
+            [span_8](start_span)border-radius: 25px;[span_8](end_span)
+            [span_9](start_span)text-decoration: none;[span_9](end_span)
             font-size: 0.9rem;
             font-weight: 600;
         }
 
         /* Banner Principal */
         .hero {
-            background-color: var(--banner-bege);
-            border-radius: 35px;
+            [span_10](start_span)background-color: var(--banner-bege);[span_10](end_span)
+            [span_11](start_span)border-radius: 35px;[span_11](end_span)
             padding: 45px 20px; 
-            color: var(--text-dark-brown);
-            text-align: center;
-            margin-bottom: 40px;
+            [span_12](start_span)color: var(--text-dark-brown);[span_12](end_span)
+            [span_13](start_span)text-align: center;[span_13](end_span)
+            [span_14](start_span)margin-bottom: 40px;[span_14](end_span)
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
-        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.7; }
-        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; font-weight: 700; }
-        .hero h1 span { color: var(--accent-orange); }
-        .hero p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 25px; }
+        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.7; [span_15](start_span)}
+        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; font-weight: 700; }[span_15](end_span)
+        .hero h1 span { color: var(--accent-orange); [span_16](start_span)}
+        .hero p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 25px; }[span_16](end_span)
 
         .hero .main-img { 
-            width: 100%;
+            [span_17](start_span)width: 100%;[span_17](end_span)
             max-width: 280px; 
-            margin: 0 auto;
-            display: block;
+            [span_18](start_span)margin: 0 auto;[span_18](end_span)
+            [span_19](start_span)display: block;[span_19](end_span)
         }
 
-        /* Seção de Destaques Estilo Banner */
-        .content-section { margin-top: 30px; padding: 0 5px; }
-        .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }
+        /* Seção de Destaques */
+        .content-section { margin-top: 30px; padding: 0 5px; [span_20](start_span)}
+        .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }[span_20](end_span)
 
-        /* Grid de Produtos inspirado no modelo */
+        /* Grid de Imagens */
         .products-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Dois por linha como no modelo */
+            grid-template-columns: 1fr 1fr; 
             gap: 15px;
         }
 
-        .product-card {
-            background-color: var(--banner-bege); /* Cor Bege para combinar */
+        /* Card agora é apenas um container para a imagem */
+        .product-image-card {
+            background-color: var(--banner-bege); 
             border-radius: 25px;
-            padding: 15px;
-            text-align: center;
-            color: var(--text-dark-brown);
-            position: relative;
-            overflow: hidden;
-            min-height: 220px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-
-        .product-card span { font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: var(--accent-orange); }
-        .product-card h3 { font-size: 0.9rem; margin: 5px 0; line-height: 1.2; }
-
-        /* Espaço para a Imagem (Editável) */
-        .img-placeholder {
-            width: 100%;
-            height: 100px;
-            background: rgba(0,0,0,0.05); /* Fundo leve para indicar o espaço */
-            border-radius: 15px;
-            margin: 10px 0;
+            overflow: hidden; /* Garante que a imagem siga o arredondamento */
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px dashed var(--accent-orange);
+            aspect-ratio: 4 / 5; /* Define uma proporção vertical similar ao modelo */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 1px solid rgba(255,255,255,0.05);
         }
-        
-        /* Preço flutuante estilo modelo */
-        .price-tag {
-            background: var(--accent-orange);
-            color: white;
+
+        .product-image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz a imagem preencher todo o espaço sem distorcer */
+            display: block;
+        }
+
+        .placeholder-text {
+            color: var(--text-dark-brown);
             font-size: 0.7rem;
-            font-weight: 700;
-            padding: 5px 10px;
-            border-radius: 15px;
-            align-self: center;
+            font-weight: 600;
+            text-align: center;
+            padding: 20px;
+            opacity: 0.5;
         }
 
     </style>
@@ -126,47 +112,27 @@
         <span>SOBREMESAS</span>
         <h1>Bolos Caseiros com<br><span>Sabores Deliciosos</span></h1>
         <p>Sabor caseiro e tradição em cada pedaço.</p>
-        <img src="Logo.png" alt="Confeitos Logo" class="main-img">
+        [span_21](start_span)<img src="Logo.png" alt="Confeitos Logo" class="main-img">[span_21](end_span)
     </section>
 
     <div class="content-section">
         <h2 class="section-title">Destaques da Semana</h2>
         
         <div class="products-grid">
-            <div class="product-card">
-                <span>Especial</span>
-                <h3>Bolo de<br>Cenoura</h3>
-                <div class="img-placeholder">
-                    <small style="color: #999; font-size: 0.5rem;">Sua Imagem Aqui</small>
-                </div>
-                <div class="price-tag">R$ 35,00</div>
+            <div class="product-image-card">
+                <span class="placeholder-text">Banner de Produto 1</span>
             </div>
 
-            <div class="product-card">
-                <span>Tradicional</span>
-                <h3>Bolo de<br>Fubá</h3>
-                <div class="img-placeholder">
-                    <small style="color: #999; font-size: 0.5rem;">Sua Imagem Aqui</small>
-                </div>
-                <div class="price-tag">R$ 25,00</div>
+            <div class="product-image-card">
+                <span class="placeholder-text">Banner de Produto 2</span>
             </div>
 
-            <div class="product-card">
-                <span>Destaque</span>
-                <h3>Bolo de<br>Chocolate</h3>
-                <div class="img-placeholder">
-                    <small style="color: #999; font-size: 0.5rem;">Sua Imagem Aqui</small>
-                </div>
-                <div class="price-tag">R$ 40,00</div>
+            <div class="product-image-card">
+                <span class="placeholder-text">Banner de Produto 3</span>
             </div>
 
-            <div class="product-card">
-                <span>Novidade</span>
-                <h3>Bolo de<br>Laranja</h3>
-                <div class="img-placeholder">
-                    <small style="color: #999; font-size: 0.5rem;">Sua Imagem Aqui</small>
-                </div>
-                <div class="price-tag">R$ 30,00</div>
+            <div class="product-image-card">
+                <span class="placeholder-text">Banner de Produto 4</span>
             </div>
         </div>
     </div>
