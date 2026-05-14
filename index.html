@@ -7,98 +7,86 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-dark: #1a1a1a;
-            --banner-bege: #f5f1e9; 
-            --accent-orange: #d48b49;
-            --text-dark-brown: #413529;
+            -[span_5](start_span)-bg-dark: #1a1a1a;[span_5](end_span)
+            --banner-bege: #f5f1e9; [span_6](start_span)/* Cor idêntica ao fundo da sua logo */[span_6](end_span)
+            -[span_7](start_span)-accent-orange: #d48b49;[span_7](end_span)
+            -[span_8](start_span)-text-dark-brown: #413529;[span_8](end_span)
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; [span_2](start_span)}
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; [span_9](start_span)}
 
-        body { background-color: var(--bg-dark); color: white; padding: 15px; }[span_2](end_span)
+        body { background-color: var(--bg-dark); color: white; padding: 15px; }[span_9](end_span)
 
         /* Header */
         header {
-            [span_3](start_span)display: flex;[span_3](end_span)
-            [span_4](start_span)justify-content: space-between;[span_4](end_span)
+            [span_10](start_span)display: flex;[span_10](end_span)
+            [span_11](start_span)justify-content: space-between;[span_11](end_span)
             align-items: center;
             padding: 10px 5px 25px 5px;
         }
-        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; [span_5](start_span)}
+        .logo { font-weight: 700; color: var(--accent-orange); font-size: 1.4rem; [span_12](start_span)}
         
         .btn-whatsapp {
-            background: var(--accent-orange);[span_5](end_span)
-            [span_6](start_span)color: white;[span_6](end_span)
-            [span_7](start_span)padding: 10px 22px;[span_7](end_span)
-            [span_8](start_span)border-radius: 25px;[span_8](end_span)
-            [span_9](start_span)text-decoration: none;[span_9](end_span)
+            background: var(--accent-orange);[span_12](end_span)
+            [span_13](start_span)color: white;[span_13](end_span)
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
             font-size: 0.9rem;
-            font-weight: 600;
+            [span_14](start_span)font-weight: 600;[span_14](end_span)
         }
 
-        /* Banner Principal */
+        /* Banner Principal - Restaurado com a cor bege */
         .hero {
-            [span_10](start_span)background-color: var(--banner-bege);[span_10](end_span)
-            [span_11](start_span)border-radius: 35px;[span_11](end_span)
+            [span_15](start_span)background-color: var(--banner-bege);[span_15](end_span)
+            [span_16](start_span)border-radius: 35px;[span_16](end_span)
             padding: 45px 20px; 
-            [span_12](start_span)color: var(--text-dark-brown);[span_12](end_span)
-            [span_13](start_span)text-align: center;[span_13](end_span)
-            [span_14](start_span)margin-bottom: 40px;[span_14](end_span)
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            [span_17](start_span)color: var(--text-dark-brown);[span_17](end_span)
+            [span_18](start_span)text-align: center;[span_18](end_span)
+            [span_19](start_span)margin-bottom: 40px;[span_19](end_span)
+            [span_20](start_span)box-shadow: 0 10px 20px rgba(0,0,0,0.2);[span_20](end_span)
         }
         
-        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.7; [span_15](start_span)}
-        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; font-weight: 700; }[span_15](end_span)
-        .hero h1 span { color: var(--accent-orange); [span_16](start_span)}
-        .hero p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 25px; }[span_16](end_span)
+        .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.7; [span_21](start_span)}
+        .hero h1 { font-size: 1.8rem; margin: 15px 0; line-height: 1.2; font-weight: 700; }[span_21](end_span)
+        .hero h1 span { color: var(--accent-orange); [span_22](start_span)}
+        .hero p { font-size: 0.9rem; line-height: 1.5; margin-bottom: 25px; font-weight: 400; }[span_22](end_span)
 
         .hero .main-img { 
-            [span_17](start_span)width: 100%;[span_17](end_span)
-            max-width: 280px; 
-            [span_18](start_span)margin: 0 auto;[span_18](end_span)
-            [span_19](start_span)display: block;[span_19](end_span)
-        }
-
-        /* Seção de Destaques */
-        .content-section { margin-top: 30px; padding: 0 5px; [span_20](start_span)}
-        .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }[span_20](end_span)
-
-        /* Grid de Imagens */
-        .products-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; 
-            gap: 15px;
-        }
-
-        /* Card agora é apenas um container para a imagem */
-        .product-image-card {
-            background-color: var(--banner-bege); 
-            border-radius: 25px;
-            overflow: hidden; /* Garante que a imagem siga o arredondamento */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 4 / 5; /* Define uma proporção vertical similar ao modelo */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .product-image-card img {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Faz a imagem preencher todo o espaço sem distorcer */
+            [span_23](start_span)max-width: 260px;[span_23](end_span)
+            margin: 0 auto;
             display: block;
         }
 
-        .placeholder-text {
-            color: var(--text-dark-brown);
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-align: center;
-            padding: 20px;
-            opacity: 0.5;
+        /* Seção Inferior - Ajustada para aceitar imagens no futuro */
+        .content-section { margin-top: 30px; padding: 0 5px; [span_24](start_span)}
+        .section-title { font-size: 1.3rem; color: white; margin-bottom: 20px; font-weight: 600; }[span_24](end_span)
+        
+        .grid-novidades {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
         }
 
+        .box-item {
+            [span_25](start_span)background: #252525;[span_25](end_span)
+            [span_26](start_span)border: 1px dashed #555;[span_26](end_span)
+            [span_27](start_span)border-radius: 20px;[span_27](end_span)
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .box-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .box-item p { font-style: italic; font-size: 0.8rem; color: #999; [span_28](start_span)}
     </style>
 </head>
 <body>
@@ -111,28 +99,19 @@
     <section class="hero">
         <span>SOBREMESAS</span>
         <h1>Bolos Caseiros com<br><span>Sabores Deliciosos</span></h1>
-        <p>Sabor caseiro e tradição em cada pedaço.</p>
-        [span_21](start_span)<img src="Logo.png" alt="Confeitos Logo" class="main-img">[span_21](end_span)
+        <p>Sabor caseiro e tradição em cada pedaço, feitos com ingredientes selecionados para você.</p>
+        <img src="Logo.png" alt="Confeitos Logo" class="main-img">[span_28](end_span)
     </section>
 
     <div class="content-section">
         <h2 class="section-title">Destaques da Semana</h2>
         
-        <div class="products-grid">
-            <div class="product-image-card">
-                <span class="placeholder-text">Banner de Produto 1</span>
+        <div class="grid-novidades">
+            <div class="box-item">
+                <p>Em breve...</p>
             </div>
-
-            <div class="product-image-card">
-                <span class="placeholder-text">Banner de Produto 2</span>
-            </div>
-
-            <div class="product-image-card">
-                <span class="placeholder-text">Banner de Produto 3</span>
-            </div>
-
-            <div class="product-image-card">
-                <span class="placeholder-text">Banner de Produto 4</span>
+            <div class="box-item">
+                <p>Em breve...</p>
             </div>
         </div>
     </div>
