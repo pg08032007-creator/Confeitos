@@ -8,8 +8,8 @@
     <style>
         :root {
             --bg-dark: #1a1a1a;
-            /* Cor extraída exatamente do fundo da sua logo */
-            --banner-bege: #f2eee3; 
+            /* Cor extraída exatamente do fundo da sua imagem (Logo.png) */
+            --banner-bege: #f5f1e9; 
             --accent-orange: #d48b49;
             --text-dark-brown: #413529;
         }
@@ -37,7 +37,7 @@
             font-weight: 600;
         }
 
-        /* Banner Principal */
+        /* Banner Principal - Cor idêntica à Logo */
         .hero {
             background-color: var(--banner-bege);
             border-radius: 35px;
@@ -48,7 +48,8 @@
             max-width: 100%;
             margin-left: auto;
             margin-right: auto;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            /* Removido box-shadow agressivo para não escurecer as bordas */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         
         .hero span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 3px; font-weight: 700; opacity: 0.7; }
@@ -60,10 +61,10 @@
         /* Imagem Logo.png */
         .hero .main-img { 
             width: 100%;
-            max-width: 260px; 
+            max-width: 280px; 
             margin: 0 auto;
             display: block;
-            /* Removido o mix-blend-mode para evitar variações de tom */
+            /* Removido o mix-blend-mode para manter a fidelidade da cor original */
         }
 
         /* Seção Inferior */
